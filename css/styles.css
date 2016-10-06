@@ -1,0 +1,31 @@
+/************ General Styles *************/
+.full {
+  width: 100%;
+  height: 100%;
+  left: 0 px;
+  top: 0 px; }
+
+.crimson {
+  background-color: #6E0A1E; }
+
+.white {
+  background-color: #FFFFFF; }
+
+.banner {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  left: 0 px;
+  top: 20%;
+  text-align: center; }
+  .banner img {
+    display: block;
+    height: 85%;
+    width: auto;
+    margin: 0 auto; }
+  .banner p {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20;
+    margin: 0 auto; }
+
+/*# sourceMappingURL=styles.css.map */
