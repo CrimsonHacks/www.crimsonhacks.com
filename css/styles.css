@@ -4,14 +4,9 @@
   background-size: cover;
   width: 100%;
   height: 100%;
-  max-height: 150vw; }
+  max-height: 150vw;
+  min-height: 100vw; }
 
-@media (min-width: 480px) {
-  .hero-page {
-    min-height: 100vw; } }
-@media (min-width: 768px) {
-  .hero-page {
-    min-height: auto; } }
 .hero-page-content {
   width: 100%;
   height: 100%; }
@@ -56,26 +51,16 @@
     display: block;
     width: 100%; }
 
-.date-xs-screens {
+.hackathon-date {
   text-align: center;
   font-size: 6vw;
   font-weight: 200; }
 
-.date-sm-screens {
-  text-align: center;
-  font-size: 3vw;
-  font-weight: 200; }
-
-.date-md-screens {
-  text-align: center;
-  font-size: 2vw;
-  font-weight: 200; }
-
-.apply-button {
+.apply-button-div {
   margin-top: 10vh;
   text-align: center; }
 
-.apply-button-xs, .apply-button-sm, .apply-button-md {
+.apply-button {
   display: inline-block;
   cursor: pointer;
   text-align: center;
@@ -85,31 +70,53 @@
   background-color: #FFFFFF;
   border: 1px solid #555555;
   border-radius: 8px;
-  box-shadow: 0 9px #999999; }
-
-.apply-button-xs {
+  box-shadow: 0 9px #999999;
   padding: 7px 13px;
   font-size: 4vw; }
 
-.apply-button-sm {
-  padding: 10px 17px;
-  font-size: 3vw; }
-
-.apply-button-md {
-  padding: 15px 25px;
-  font-size: 2vw; }
-
-.apply-button-xs:hover, .apply-button-sm:hover, .apply-button-md:hover {
+.apply-button:hover {
   background-color: #DC143C;
   text-decoration: none;
   color: #FFFFFF; }
 
-.apply-button-xs:active, .apply-button-sm:active, .apply-button-md:active {
+.apply-button:active {
   background-color: #DC143C;
   box-shadow: 0 5px #666666;
   transform: translateY(4px); }
 
 .center-media {
   text-align: center; }
+
+/************* Mobile First Design **********/
+/* 480+ (xs+) */
+@media only screen and (min-width: 480px) {
+  .hero-page {
+    min-height: 100vw; }
+
+  .apply-button {
+    padding: 7px 13px;
+    font-size: 4vw; }
+
+  .hackathon-date {
+    font-size: 6vw; } }
+/* 768+ (sm+) */
+@media only screen and (min-width: 768px) {
+  .hero-page {
+    min-height: auto; }
+
+  .apply-button {
+    padding: 10px 17px;
+    font-size: 3vw; }
+
+  .hackathon-date {
+    font-size: 3vw; } }
+/* 992+ (md+) */
+@media only screen and (min-width: 992px) {
+  .apply-button {
+    padding: 15px 25px;
+    font-size: 2vw; }
+
+  .hackathon-date {
+    font-size: 2vw; } }
 
 /*# sourceMappingURL=styles.css.map */
