@@ -1,4 +1,20 @@
-/************ General Styles *************/
+/************ Page Styles *************/
+@font-face {
+    font-family: "Avenir Black";
+    src: url(../fonts/Avenir-Black.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Avenir Book";
+    src: url(../fonts/Avenir-Book.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'Avenir Medium';
+    src: url(../fonts/Avenir-Medium.ttf) format("truetype");
+}
+
+/************ Section Styles *************/
 
 .hero-page {
     background-image: url('../images/img_background.png');
@@ -14,7 +30,14 @@
     height: 100%;
 }
 
+#hackathon-date {
+    p {
+        font-family: 'Avenir Medium', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+}
+
 .header-bar {
+    font-family: 'Avenir Medium', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     ul {
         position: absolute;
         top: 0;

@@ -1,4 +1,14 @@
-/************ General Styles *************/
+/************ Page Styles *************/
+@font-face {
+  font-family: "Avenir Black";
+  src: url(../fonts/Avenir-Black.ttf) format("truetype"); }
+@font-face {
+  font-family: "Avenir Book";
+  src: url(../fonts/Avenir-Book.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Avenir Medium';
+  src: url(../fonts/Avenir-Medium.ttf) format("truetype"); }
+/************ Section Styles *************/
 .hero-page {
   background-image: url("../images/img_background.png");
   background-size: cover;
@@ -11,28 +21,33 @@
   width: 100%;
   height: 100%; }
 
-.header-bar ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e7e7e7; }
-.header-bar li {
-  float: left; }
-.header-bar li a {
-  display: block;
-  color: #000000;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-weight: 200; }
-.header-bar li a:hover {
-  background-color: #f3f3f3; }
+#hackathon-date p {
+  font-family: 'Avenir Medium', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+
+.header-bar {
+  font-family: 'Avenir Medium', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+  .header-bar ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e7e7e7; }
+  .header-bar li {
+    float: left; }
+  .header-bar li a {
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 200; }
+  .header-bar li a:hover {
+    background-color: #f3f3f3; }
 
 .mlh-badge {
   display: block;
