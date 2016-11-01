@@ -1,4 +1,4 @@
-/************ All-Page Styles *************/
+/************ Fonts *************/
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
 
 @font-face {
@@ -16,9 +16,23 @@
     src: url(../fonts/Avenir-Medium.ttf) format('truetype');
 }
 
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
+
+
+/************ All-Page Styles *************/
+
+h1 {
+    text-transform: uppercase;
+    font-family: 'Avenir Book', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 a:hover {
     transition: .6s;
+}
+
+.divider {
+    border-bottom: 2px solid #333;
+    width: 50px;
+    margin: 10px 0 20px 0;
 }
 
 /************ Section Styles *************/
@@ -33,7 +47,8 @@ a:hover {
 }
 
 .scrolling {
-    min-height: 100%;
+    min-height: 50%;
+    padding: 30px 0;
 }
 
 .hero {
@@ -105,12 +120,9 @@ a:hover {
 
 .about {
     background: #FFFFFF;
-    padding: 30px 0;
 
     h1 {
-        text-transform: uppercase;
         color: #b7b7b7;
-        font-family: 'Avenir Book', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
     p {
         font-family: 'Source Sans Pro', sans-serif;
@@ -123,9 +135,53 @@ a:hover {
         font-weight: 700;
     }
     .divider {
-        border-bottom: 2px solid #333;
-        width: 50px;
-        margin: 10px 0 20px 0;
+        border-color: #333;
+    }
+}
+
+.faq {
+    background: #333;
+    
+    h1 {
+        color: #FFFFFF;
+    }
+    h2 {
+        display: block;
+        background: #af2628;
+        margin: 0;
+        padding: 10px;
+        color: #FFFFFF;
+        font-family: 'Avenir Medium', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 1.3em;
+    }
+    .col-md-4 {
+        margin: 0;
+        padding: 0;
+    }
+    .left {
+        padding-right: 20px;
+    }
+    .middle {
+        padding-right: 20px;
+    }
+    .right {
+        padding-right: 20px;
+    }
+    .divider {
+        border-color: #FFFFFF;
+    }
+    .question-box {
+        background: #FFFFFF;
+        width: 100%;
+        padding: 0;
+        margin: 0 0 20px 0;
+
+        p {
+            padding: 10px;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #333;
+            line-height: 1.5em;
+        }
     }
 }
 
