@@ -33,8 +33,16 @@ a:hover {
   font-family: 'Avenir Medium', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
 
 .navbar {
-  font-family: 'Avenir Medium', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #FFFFFF;
+  border: 0px solid #333;
   text-transform: uppercase; }
+
+.navbar-default .navbar-nav {
+  font-family: 'Avenir Medium', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
+  .navbar-default .navbar-nav li a {
+    color: #333; }
+  .navbar-default .navbar-nav li a:hover {
+    color: #af2628; }
 
 .web-logo {
   position: relative;
