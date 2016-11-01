@@ -25,6 +25,10 @@ h1 {
     font-family: 'Avenir Book', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+a {
+    color: #af2628;
+}
+
 a:hover {
     transition: .6s;
 }
@@ -35,11 +39,20 @@ a:hover {
     margin: 10px 0 20px 0;
 }
 
+p {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1em;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.8em;
+}
+
 /************ Section Styles *************/
 
 .parallax {
     min-height: 100vw;
     height: 100vw;
+    padding: 30px 0;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -54,6 +67,7 @@ a:hover {
 .hero {
     background-image: url('../images/img_background.png');
     min-height: 100%;
+    padding: 30px 0;
 }
 
 #hackathon-date {
@@ -124,13 +138,6 @@ a:hover {
     h1 {
         color: #b7b7b7;
     }
-    p {
-        font-family: 'Source Sans Pro', sans-serif;
-        font-size: 1.1em;
-        font-weight: 400;
-        color: #333;
-        line-height: 1.8em;
-    }
     strong {
         font-weight: 700;
     }
@@ -149,7 +156,7 @@ a:hover {
         display: block;
         background: #af2628;
         margin: 0;
-        padding: 10px;
+        padding: 15px 10px;
         color: #FFFFFF;
         font-family: 'Avenir Medium', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 1.3em;
@@ -185,6 +192,35 @@ a:hover {
     }
 }
 
+.mentor {
+    background-image: url('../images/img_background.png');
+    min-height: 50%;
+
+    h1 {
+        color: #af2628;
+    }
+
+    .mentor-button-div {
+    margin-top: 3vh;
+    text-align: center;
+    }
+
+    .mentor-button {
+        font-family: 'Avenir Medium', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background: #FFFFFF;
+        border: 3px solid #FFFFFF;
+        transition: .6s;
+    }
+
+    .mentor-button:hover {
+        background-color: rgba(255,255,255, 0);
+        text-decoration: none;
+        border: 3px solid #333;
+        color: #333;
+    }
+
+}
+
 /************* Mobile First Design **********/
 
 /* 480+ (xs+) */
@@ -205,7 +241,7 @@ a:hover {
     .parallax {
         height: auto;
     }
-    .apply-button {
+    .apply-button, .mentor-button {
         padding: 10px 17px;
         font-size: 3vw;
     }
@@ -215,7 +251,7 @@ a:hover {
 }
 /* 992+ (md+) */
 @media only screen and ( min-width: 992px ) {
-    .apply-button {
+    .apply-button, .mentor-button {
         padding: 10px 20px;
         font-size: 2vw;
     }
