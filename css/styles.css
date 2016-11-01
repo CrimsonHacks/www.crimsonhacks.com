@@ -1,31 +1,97 @@
-/************ General Styles *************/
-.full {
+/************ All-Page Styles *************/
+@font-face {
+  font-family: 'Avenir Black';
+  src: url(../fonts/Avenir-Black.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Avenir Book';
+  src: url(../fonts/Avenir-Book.ttf) format("truetype"); }
+@font-face {
+  font-family: 'Avenir Medium';
+  src: url(../fonts/Avenir-Medium.ttf) format("truetype"); }
+a:hover {
+  transition: .6s; }
+
+/************ Section Styles *************/
+.parallax {
+  min-height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+.hero {
+  background-image: url("../images/img_background.png");
+  min-height: 100%; }
+
+.hero-page-content {
   width: 100%;
-  height: 100%;
-  left: 0 px;
-  top: 0 px; }
+  height: 100%; }
 
-.crimson {
-  background-color: #6E0A1E; }
+#hackathon-date p {
+  font-family: 'Avenir Medium', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; }
 
-.white {
-  background-color: #FFFFFF; }
+.navbar {
+  font-family: 'Avenir Medium', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-transform: uppercase; }
 
-.banner {
-  position: absolute;
-  width: 100%;
-  height: 60%;
-  left: 0 px;
-  top: 20%;
-  text-align: center; }
-  .banner img {
+.web-logo {
+  position: relative;
+  top: 106px; }
+  .web-logo img {
     display: block;
-    height: 85%;
-    width: auto;
-    margin: 0 auto; }
-  .banner p {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 20;
-    margin: 0 auto; }
+    width: 100%; }
+
+.hackathon-date {
+  text-align: center;
+  font-size: 6vw;
+  font-weight: 200; }
+
+.apply-button-div {
+  margin-top: 10vh;
+  text-align: center; }
+
+.apply-button {
+  font-family: 'Avenir Medium', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background: #FFFFFF;
+  border: 3px solid #FFFFFF;
+  transition: .6s; }
+
+.apply-button:hover {
+  background-color: rgba(255, 255, 255, 0);
+  text-decoration: none;
+  border: 3px solid #333;
+  color: #333; }
+
+.center-media {
+  text-align: center; }
+
+/************* Mobile First Design **********/
+/* 480+ (xs+) */
+@media only screen and (min-width: 480px) {
+  .apply-button {
+    padding: 7px 13px;
+    font-size: 4vw; }
+
+  .hackathon-date {
+    font-size: 6vw; } }
+/* 768+ (sm+) */
+@media only screen and (min-width: 768px) {
+  .hero-page {
+    min-height: auto; }
+
+  .apply-button {
+    padding: 10px 17px;
+    font-size: 3vw; }
+
+  .hackathon-date {
+    font-size: 3vw; } }
+/* 992+ (md+) */
+@media only screen and (min-width: 992px) {
+  .apply-button {
+    padding: 10px 20px;
+    font-size: 2vw; }
+
+  .hackathon-date {
+    font-size: 2vw; } }
 
 /*# sourceMappingURL=styles.css.map */
