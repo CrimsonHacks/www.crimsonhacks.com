@@ -13,7 +13,8 @@ a:hover {
 
 /************ Section Styles *************/
 .parallax {
-  min-height: 100%;
+  min-height: 100vw;
+  height: 150vw;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -68,6 +69,9 @@ a:hover {
 /************* Mobile First Design **********/
 /* 480+ (xs+) */
 @media only screen and (min-width: 480px) {
+  .parallax {
+    height: 150vw; }
+
   .apply-button {
     padding: 7px 13px;
     font-size: 4vw; }
@@ -76,8 +80,8 @@ a:hover {
     font-size: 6vw; } }
 /* 768+ (sm+) */
 @media only screen and (min-width: 768px) {
-  .hero-page {
-    min-height: auto; }
+  .parallax {
+    height: auto; }
 
   .apply-button {
     padding: 10px 17px;
