@@ -14,7 +14,7 @@ a:hover {
 /************ Section Styles *************/
 .parallax {
   min-height: 100vw;
-  height: 150vw;
+  height: 100vw;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -70,7 +70,7 @@ a:hover {
 /* 480+ (xs+) */
 @media only screen and (min-width: 480px) {
   .parallax {
-    height: 150vw; }
+    height: 100vw; }
 
   .apply-button {
     padding: 7px 13px;
