@@ -30,7 +30,9 @@ a {
 }
 
 a:hover {
-    transition: .6s;
+    transition: .3s;
+    color: #b7b7b7;
+    text-decoration: none;
 }
 
 .divider {
@@ -219,6 +221,35 @@ p {
         color: #333;
     }
 
+}
+
+.sponsor {
+    .logos {
+        margin-top: 40px;
+    }
+    .divider {
+        border-color: #af2628;
+    }
+}
+
+footer {
+    background: #333;
+    padding: 50px 0;
+
+    p {
+        color: #FFFFFF;
+        text-align: center;
+        font-family: 'Avenir Black';
+    }
+    a {
+        color: #FFFFFF;
+    }
+    a:hover {
+        color: #af2628;
+    }
+    .social {
+            font-size: 3em;
+    }
 }
 
 /************* Mobile First Design **********/

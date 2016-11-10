@@ -18,7 +18,9 @@ a {
   color: #af2628; }
 
 a:hover {
-  transition: .6s; }
+  transition: .3s;
+  color: #b7b7b7;
+  text-decoration: none; }
 
 .divider {
   border-bottom: 2px solid #333;
@@ -158,6 +160,25 @@ p {
     text-decoration: none;
     border: 3px solid #333;
     color: #333; }
+
+.sponsor .logos {
+  margin-top: 40px; }
+.sponsor .divider {
+  border-color: #af2628; }
+
+footer {
+  background: #333;
+  padding: 50px 0; }
+  footer p {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Avenir Black'; }
+  footer a {
+    color: #FFFFFF; }
+  footer a:hover {
+    color: #af2628; }
+  footer .social {
+    font-size: 3em; }
 
 /************* Mobile First Design **********/
 /* 480+ (xs+) */
