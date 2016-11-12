@@ -11,7 +11,32 @@
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
         <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
 
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function(){
+        
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+            } // End if
+        });
+        });
+        </script>
     </head>
     <body>
         
@@ -31,11 +56,11 @@
                     </div>
                      <div class="collapse navbar-collapse" id="main_navigation">
                         <ul class="nav navbar-nav navbar-left">
+                            <li><a href="#apply">Apply</a></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#faq">FAQ</a></li>
                             <li><a href="#sponsor">Sponsor</a></li>
                             <li><a href="#mentor">Mentor</a></li>
-                            <li><a href="#volunteer">Volunteer</a></li>
                         </ul>
                     </div>
                 </div>
@@ -50,7 +75,7 @@
         <!--
             Hero section
         -->
-        <section class="parallax hero">
+        <section class="parallax hero" id="apply">
             <div class="container-fluid">
                 <div class="web-logo col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                     <img src="images/logo_web.png" />
@@ -87,25 +112,54 @@
 
                 <div class="col-md-4 left">
                     <div class="question-box">
-                        <h2>How much does CrimsonHacks cost?</h2>
-                        <p>Absolutely nothing! We'll provide free food and accomodations for the weekend.</p>
+                        <h2>What is a hackathon?</h2>
+                        <p>A <i>hackathon</i> stands for a hacking marathon. We're doing the <a href="https://en.wikipedia.org/wiki/Hacker_culture">
+                            fun, legal hacking</a>, not the <a href="https://en.wikipedia.org/wiki/Security_hacker">bad kind</a>.
+                        </p>
                     </div>
                     <div class="question-box">
-                        <h2>Will CrimsonHacks be providing transportation?</h2>
-                        <p>Maybe</p>
+                        <h2>How much does CrimsonHacks cost?</h2>
+                        <p>Absolutely nothing. We'll provide free food, venue, wifi, swag, etc. for the event. Just bring 
+                            you and your friends!
+                        </p>
+                    </div>
+                    <div class="question-box">
+                        <h2>How do I get there?</h2>
+                        <p>By car or bus. We'll provide travel reimbursements for those traveling more than 30 miles. 
+                            We'll be sending a limited number of buses to colleges that meet the minimum attendance requirements
+                            (so if you want to take a bus, get your friends to come!).
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4 middle">
                     <div class="question-box">
                         <h2>What if I don't have a team?</h2>
-                        <p>That’s totally fine! We’ll have a team-forming event right before development starts.</p>
+                        <p>That’s totally fine! We’ll have a team-forming event right before development starts. If you want
+                            to form a team beforehand, we encourage you to use our Facebook page and #teamforming Slack channel to link up!
+                        </p>
+                    </div>
+                    <div class="question-box">
+                        <h2>What about sleeping?</h2>
+                        <p>Don't forget a pillow, blankets, and a sleeping bag! We'll have designated quiet areas
+                            if you need to get some shut-eye. You'll probably be hacking away, though!</p>
+                    </div>
+                    <div class="question-box">
+                        <h2>Can I volunteer?</h2>
+                        <p>Yes! University of Alabama students are eligible to volunteer. Fill out this form if you're interested.</p>
                     </div>
                 </div>
                 <div class="col-md-4 right">
                     <div class="question-box">
                         <h2>What should I bring?</h2>
-                        <p>Make sure you have a photo ID, laptop (and any other devices you want to use), chargers,  toiletries, a change of clothes, and a passion for learning!</p>
+                        <p>Make sure you have a photo ID, laptop (and any other devices you want to use), chargers,  toiletries, a 
+                            change of clothes, and a passion for learning!
+                        </p>
                     </div>
+                    <div class="question-box">
+                        <h2>What if I can't code?</h2>
+                        <p>That's okay, we'll teach you. If you aren't interested in coding, there are plenty of other things you can do - 
+                            attend workshops, contribute your other awesome skills, and network with participants and sponsors.
+                        </p>
                 </div>
             </div>
         </section>
@@ -152,7 +206,7 @@
                 <a href="mailto:hello@crimsonhacks.com"><i class="fa fa-envelope-o"></i></a>
                 
             </p>
-            <p>Copyright &copy; CrimsonHacks 2016.</p>
+            <p><a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Code of Conduct</a></p>
         </footer>
     </body>
 </html>
