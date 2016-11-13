@@ -20,6 +20,11 @@
 
 /************ All-Page Styles *************/
 
+.navbar-toggle.navbar-toggle-left {
+  float: left;
+  margin-left: 10px;
+}
+
 h1 {
     text-transform: uppercase;
     font-family: 'Avenir Book', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
