@@ -10,7 +10,7 @@
   font-family: 'Avenir Medium';
   src: url(../fonts/Avenir-Medium.ttf) format("truetype"); }
 /************ All-Page Styles *************/
-.navbar-toggle.navbar-left {
+.navbar-toggle.navbar-toggle-left {
   float: left;
   margin-left: 10px; }
 
