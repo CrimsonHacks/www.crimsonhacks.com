@@ -36,8 +36,6 @@ p {
 
 /************ Section Styles *************/
 .parallax {
-  min-height: 100vw;
-  height: 100vw;
   padding: 30px 0;
   background-size: cover;
   background-attachment: fixed;
@@ -50,7 +48,8 @@ p {
 
 .hero {
   background-image: url("../images/img_background.png");
-  min-height: 100%;
+  min-height: 100vh;
+  height: 100vh;
   padding: 30px 0; }
 
 #hackathon-date p {
@@ -81,7 +80,7 @@ p {
   font-weight: 200; }
 
 .apply-button-div {
-  margin-top: 10vh;
+  margin-top: 6vh;
   text-align: center; }
 
 .apply-button {
@@ -89,6 +88,8 @@ p {
   background: #FFFFFF;
   border: 3px solid #FFFFFF;
   transition: .6s; }
+  .apply-button a {
+    color: #333; }
 
 .apply-button:hover {
   background-color: rgba(255, 255, 255, 0);
@@ -105,6 +106,8 @@ p {
     color: #b7b7b7; }
   .about strong {
     font-weight: 700; }
+  .about p {
+    font-size: 1.3em; }
   .about .divider {
     border-color: #333; }
 
@@ -143,8 +146,7 @@ p {
       line-height: 1.5em; }
 
 .mentor {
-  background-image: url("../images/img_background.png");
-  min-height: 50%; }
+  background-image: url("../images/img_background.png"); }
   .mentor h1 {
     color: #af2628; }
   .mentor .mentor-button-div {
@@ -190,8 +192,9 @@ footer {
 /************* Mobile First Design **********/
 /* 480+ (xs+) */
 @media only screen and (min-width: 480px) {
-  .parallax {
-    height: 100vw; }
+  .hero {
+    height: 100vh;
+    min-height: 100vh; }
 
   .apply-button {
     padding: 7px 13px;
@@ -201,7 +204,7 @@ footer {
     font-size: 6vw; } }
 /* 768+ (sm+) */
 @media only screen and (min-width: 768px) {
-  .parallax {
+  .hero {
     height: auto; }
 
   .apply-button, .mentor-button {
@@ -215,6 +218,9 @@ footer {
   .apply-button, .mentor-button {
     padding: 10px 20px;
     font-size: 2vw; }
+
+  .apply-button-div {
+    margin-top: 4vh; }
 
   .hackathon-date {
     font-size: 2vw; } }

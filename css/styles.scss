@@ -52,8 +52,8 @@ p {
 /************ Section Styles *************/
 
 .parallax {
-    min-height: 100vw;
-    height: 100vw;
+    // min-height: 100vw;
+    // height: 100vw;
     padding: 30px 0;
     background-size: cover;
     background-attachment: fixed;
@@ -68,7 +68,8 @@ p {
 
 .hero {
     background-image: url('../images/img_background.png');
-    min-height: 100%;
+    min-height: 100vh;
+    height: 100vh;
     padding: 30px 0;
 }
 
@@ -112,7 +113,7 @@ p {
 }
 
 .apply-button-div {
-    margin-top: 10vh;
+    margin-top: 6vh;
     text-align: center;
 }
 
@@ -121,6 +122,10 @@ p {
     background: #FFFFFF;
     border: 3px solid #FFFFFF;
     transition: .6s;
+
+    a {
+        color: #333;
+    }
 }
 
 .apply-button:hover {
@@ -143,6 +148,9 @@ p {
     strong {
         font-weight: 700;
     }
+    p {
+        font-size: 1.3em;
+    }
     .divider {
         border-color: #333;
     }
@@ -150,7 +158,7 @@ p {
 
 .faq {
     background: #333;
-    
+
     h1 {
         color: #FFFFFF;
     }
@@ -196,7 +204,7 @@ p {
 
 .mentor {
     background-image: url('../images/img_background.png');
-    min-height: 50%;
+    // min-height: 100vh;
 
     h1 {
         color: #af2628;
@@ -263,8 +271,9 @@ footer {
 
 /* 480+ (xs+) */
 @media only screen and ( min-width: 480px ) {
-    .parallax {
-        height: 100vw;
+    .hero {
+        height: 100vh;
+        min-height: 100vh;
     }
     .apply-button {
         padding: 7px 13px;
@@ -273,10 +282,13 @@ footer {
     .hackathon-date {
         font-size: 6vw;
     }
+    // .mentor {
+    //     min-height: 100vh;
+    // }
 }
 /* 768+ (sm+) */
 @media only screen and ( min-width: 768px ) {
-    .parallax {
+    .hero {
         height: auto;
     }
     .apply-button, .mentor-button {
@@ -286,6 +298,11 @@ footer {
     .hackathon-date {
         font-size: 3vw;
     }
+
+    // .mentor {
+    //     min-height: 50vh;
+    // }
+
 }
 /* 992+ (md+) */
 @media only screen and ( min-width: 992px ) {
@@ -293,13 +310,22 @@ footer {
         padding: 10px 20px;
         font-size: 2vw;
     }
+    .apply-button-div {
+        margin-top: 4vh;
+    }
     .hackathon-date {
         font-size: 2vw;
     }
+    // .mentor {
+    //     min-height: auto;
+    // }
 }
 
 @media (min-width: 1200px) {
-    .container{
+    .container {
         max-width: 970px;
     }
+    // .mentor {
+    //     min-height: auto;
+    // }
 }
