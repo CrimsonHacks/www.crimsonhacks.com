@@ -220,6 +220,10 @@ p {
         background: #FFFFFF;
         border: 3px solid #FFFFFF;
         transition: .6s;
+
+         a {
+             color: #333;
+         }
     }
 
     .mentor-button:hover {
@@ -275,7 +279,7 @@ footer {
         height: 100vh;
         min-height: 100vh;
     }
-    .apply-button {
+    .apply-button, .mentor-button {
         padding: 7px 13px;
         font-size: 4vw;
     }
