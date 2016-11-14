@@ -110,10 +110,15 @@ p {
     color: #b7b7b7; }
   .about strong {
     font-weight: 700; }
-  .about p {
-    font-size: 1.3em; }
   .about .divider {
     border-color: #333; }
+  .about .icons {
+    margin: 3vh 0; }
+    .about .icons p {
+      font-size: 1vw;
+      text-align: center; }
+      .about .icons p i {
+        font-size: 5vw; }
 
 .faq {
   background: #333; }

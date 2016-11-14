@@ -153,11 +153,19 @@ p {
     strong {
         font-weight: 700;
     }
-    p {
-        font-size: 1.3em;
-    }
     .divider {
         border-color: #333;
+    }
+    .icons {
+        margin: 3vh 0;
+        p {
+            font-size: 1vw;
+            text-align: center;
+            i {
+                font-size: 5vw;
+            }
+        }
+
     }
 }
 
