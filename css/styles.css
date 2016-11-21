@@ -175,7 +175,10 @@ p {
     color: #333; }
 
 .sponsor .logos {
-  margin-top: 40px; }
+  margin-top: 40px;
+  text-align: center; }
+  .sponsor .logos img {
+    margin: 10px; }
 .sponsor .divider {
   border-color: #af2628; }
 

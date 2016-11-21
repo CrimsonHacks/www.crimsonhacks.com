@@ -251,6 +251,11 @@ p {
 .sponsor {
     .logos {
         margin-top: 40px;
+        text-align: center;
+
+        img {
+            margin: 10px;
+        }
     }
     .divider {
         border-color: #af2628;
