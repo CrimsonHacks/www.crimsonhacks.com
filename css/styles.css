@@ -72,7 +72,8 @@ p {
     color: #af2628; }
 
 .web-logo {
-  position: relative; }
+  position: relative; 
+  margin-top: 4vw; }
   .web-logo img {
     display: block;
     width: 100%; }
