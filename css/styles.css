@@ -72,8 +72,7 @@ p {
     color: #af2628; }
 
 .web-logo {
-  position: relative;
-  top: 106px; }
+  position: relative; }
   .web-logo img {
     display: block;
     width: 100%; }
