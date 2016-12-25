@@ -1,3 +1,4 @@
+$crimson: #af2628;
 /************ Fonts *************/
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
 
@@ -31,7 +32,7 @@ h1 {
 }
 
 a {
-    color: #af2628;
+    color: $crimson;
 }
 
 a:hover {
@@ -97,7 +98,7 @@ p {
             color: #333;
         }
         a:hover {
-            color: #af2628;
+            color: $crimson;
         }
     }
 }
@@ -157,15 +158,22 @@ p {
         border-color: #333;
     }
     .icons {
-        margin: 3vh 0;
+        margin: 10vh 0 5vh 0;
         p {
-            font-size: 1vw;
+            color: #b7b7b7;
+            font-family: 'Avenir-Book', sans-serif;
+            font-size: 1.2vw;
             text-align: center;
+            strong {
+              color: #333;
+              font-size: 1.5vw;
+            }
             i {
-                font-size: 5vw;
+                font-size: 7vw;
+                margin-bottom: 1vh;
+                color: $crimson;
             }
         }
-
     }
 }
 
@@ -177,7 +185,7 @@ p {
     }
     h2 {
         display: block;
-        background: #af2628;
+        background: $crimson;
         margin: 0;
         padding: 15px 10px;
         color: #FFFFFF;
@@ -216,11 +224,11 @@ p {
 }
 
 .mentor {
-    background-image: url('../images/img_background.png');
+    background-image: url('../images/img_mentor_background.jpg');
     // min-height: 100vh;
 
     h1 {
-        color: #af2628;
+        color: $crimson;
     }
 
     .mentor-button-div {
@@ -258,7 +266,7 @@ p {
         }
     }
     .divider {
-        border-color: #af2628;
+        border-color: $crimson;
     }
 }
 
@@ -275,7 +283,7 @@ footer {
         color: #FFFFFF;
     }
     a:hover {
-        color: #af2628;
+        color: $crimson;
     }
     .social {
             font-size: 3em;
@@ -283,7 +291,7 @@ footer {
 }
 
 .crimson {
-    color: #af2628;
+    color: $crimson;
 }
 .hacks {
     color: #333; font-family: 'Avenir Black';

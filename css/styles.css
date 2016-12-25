@@ -72,8 +72,8 @@ p {
     color: #af2628; }
 
 .web-logo {
-  position: relative; 
-  margin-top: 4vw; }
+  position: relative;
+  top: 106px; }
   .web-logo img {
     display: block;
     width: 100%; }
@@ -113,12 +113,19 @@ p {
   .about .divider {
     border-color: #333; }
   .about .icons {
-    margin: 3vh 0; }
+    margin: 10vh 0 5vh 0; }
     .about .icons p {
-      font-size: 1vw;
+      color: #b7b7b7;
+      font-family: 'Avenir-Book', sans-serif;
+      font-size: 1.2vw;
       text-align: center; }
+      .about .icons p strong {
+        color: #333;
+        font-size: 1.5vw; }
       .about .icons p i {
-        font-size: 5vw; }
+        font-size: 7vw;
+        margin-bottom: 1vh;
+        color: #af2628; }
 
 .faq {
   background: #333; }
@@ -155,7 +162,7 @@ p {
       line-height: 1.5em; }
 
 .mentor {
-  background-image: url("../images/img_background.png"); }
+  background-image: url("../images/img_mentor_background.jpg"); }
   .mentor h1 {
     color: #af2628; }
   .mentor .mentor-button-div {
