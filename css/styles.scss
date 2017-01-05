@@ -263,8 +263,15 @@ p {
 
         img {
             margin: 10px;
+            padding: 10px;
+            transition: .3s;
+            &:hover {
+              transition: .3s;
+              padding: 0px;
+            }
         }
     }
+
     .divider {
         border-color: $crimson;
     }

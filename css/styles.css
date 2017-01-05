@@ -185,7 +185,12 @@ p {
   margin-top: 40px;
   text-align: center; }
   .sponsor .logos img {
-    margin: 10px; }
+    margin: 10px;
+    padding: 10px;
+    transition: .3s; }
+    .sponsor .logos img:hover {
+      transition: .3s;
+      padding: 0px; }
 .sponsor .divider {
   border-color: #af2628; }
 
