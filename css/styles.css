@@ -129,7 +129,7 @@ p {
 
 #map {
   display: block;
-  width: 100%;
+  width: 90%;
   height: 50vh;
   margin: auto; }
   #map iframe {
