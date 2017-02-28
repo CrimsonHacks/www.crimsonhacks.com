@@ -207,6 +207,17 @@ p {
 .sponsor .divider {
   border-color: #af2628; }
 
+.schedule {
+  background: #fff;
+  margin: 30px 0; }
+  .schedule .divider {
+    border-color: #af2628; }
+  .schedule .table {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .95em; }
+    .schedule .table th {
+      width: 25%; }
+
 footer {
   background: #333;
   padding: 50px 0; }

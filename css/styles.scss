@@ -297,6 +297,22 @@ p {
     }
 }
 
+.schedule {
+  background: #fff;
+  margin: 30px 0;
+  .divider {
+    border-color: $crimson;
+  }
+
+  .table {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .95em;
+    th {
+      width: 25%;
+    }
+  }
+}
+
 footer {
     background: #333;
     padding: 50px 0;
