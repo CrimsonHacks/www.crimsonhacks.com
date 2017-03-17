@@ -213,10 +213,13 @@ p {
   .schedule .divider {
     border-color: #af2628; }
   .schedule .table {
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: .95em; }
-    .schedule .table th {
-      width: 25%; }
+
+.table {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em; }
+  .table th {
+    width: 25%; }
 
 footer {
   background: #333;
@@ -240,22 +243,31 @@ footer {
   font-family: 'Avenir Black'; }
 
 /************* Live Site Design **********/
-.live h1 {
-  text-align: center;
-  font-size: 3em; }
-.live .live-container {
-  background: #ffffff;
-  max-height: 75vh;
-  border-radius: 25px;
-  padding: 30px 50px;
-  margin-top: 25px;
-  overflow-y: scroll; }
-  .live .live-container h1 {
-    text-align: left;
-    font-size: 2em;
-    margin: 20px 0 10px 0;
-    padding: 0;
-    color: #af2627; }
+.live {
+  height: 100%;
+  background-image: url("../images/img_background.png");
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center; }
+  .live h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+    padding: 50px 0 30px 0; }
+  .live .live-container {
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 30px 50px;
+    margin: 25px 0; }
+    .live .live-container h1 {
+      text-align: left;
+      font-size: 2em;
+      margin: 20px 0 10px 0;
+      padding: 0;
+      color: #af2627; }
 
 /************* Mobile First Design **********/
 /* 480+ (xs+) */
@@ -279,7 +291,17 @@ footer {
     .about .icons p i {
       font-size: 10vw; }
     .about .icons p strong {
-      font-size: 6vw; } }
+      font-size: 6vw; }
+
+  .live h1 {
+    font-size: 2em; }
+  .live .live-container {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0; }
+    .live .live-container h1 {
+      font-size: 1.5em;
+      margin: 20px 0 10px 0; } }
 /* 768+ (sm+) */
 @media only screen and (min-width: 768px) {
   .hero {
@@ -298,7 +320,20 @@ footer {
   .about .icons p {
     font-size: 2vw; }
     .about .icons p strong {
-      font-size: 2.4vw; } }
+      font-size: 2.4vw; }
+
+  .live h1 {
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+    padding: 50px 0 30px 0; }
+  .live .live-container {
+    border-radius: 25px;
+    padding: 30px 50px;
+    margin: 25px 0; }
+    .live .live-container h1 {
+      font-size: 2em;
+      margin: 20px 0 10px 0; } }
 /* 992+ (md+) */
 @media only screen and (min-width: 992px) {
   .apply-button, .mentor-button {
@@ -321,4 +356,4 @@ footer {
   .container {
     max-width: 970px; } }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles1.css.map */

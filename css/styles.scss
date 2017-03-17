@@ -303,16 +303,18 @@ p {
   .divider {
     border-color: $crimson;
   }
-
   .table {
-    font-family: 'Source Sans Pro', sans-serif;
     font-size: .95em;
-    th {
-      width: 25%;
-    }
+  }
+
+}
+.table {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  th {
+    width: 25%;
   }
 }
-
 footer {
     background: #333;
     padding: 50px 0;
@@ -342,17 +344,27 @@ footer {
 
 /************* Live Site Design **********/
 .live {
+  height: 100%;
+  background-image: url('../images/img_background.png');
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
   h1 {
     text-align: center;
     font-size: 3em;
+    margin: 0;
+    padding: 50px 0 30px 0;
   }
   .live-container {
     background: #ffffff;
-    max-height: 75vh;
+    // max-height: 75vh;
     border-radius: 25px;
     padding: 30px 50px;
-    margin-top: 25px;
-    overflow-y: scroll;
+    margin: 25px 0;
+    // overflow-y: scroll;
     h1 {
       text-align: left;
       font-size: 2em;
@@ -393,6 +405,21 @@ footer {
         font-size: 6vw;
       }
     }
+
+    .live {
+      h1 {
+        font-size: 2em;
+      }
+      .live-container {
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px 0;
+        h1 {
+          font-size: 1.5em;
+          margin: 20px 0 10px 0;
+        }
+      }
+    }
 }
 /* 768+ (sm+) */
 @media only screen and ( min-width: 768px ) {
@@ -415,6 +442,24 @@ footer {
       font-size: 2vw;
       strong {
         font-size: 2.4vw;
+      }
+    }
+
+    .live {
+      h1 {
+        text-align: center;
+        font-size: 3em;
+        margin: 0;
+        padding: 50px 0 30px 0;
+      }
+      .live-container {
+        border-radius: 25px;
+        padding: 30px 50px;
+        margin: 25px 0;
+        h1 {
+          font-size: 2em;
+          margin: 20px 0 10px 0;
+        }
       }
     }
 }
