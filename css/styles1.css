@@ -220,6 +220,8 @@ p {
   font-size: 1em; }
   .table th {
     width: 25%; }
+  .table span {
+    color: #b7b7b7; }
 
 footer {
   background: #333;
