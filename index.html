@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Stylish Portfolio - Start Bootstrap Template</title>
+    <title>CrimsonHacks 2018</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -19,7 +19,8 @@
     <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/stylish-portfolio.min.css" rel="stylesheet">
+    <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 
   </head>
 
@@ -31,19 +32,19 @@
     <nav id="sidebar-wrapper">
       <ul class="sidebar-nav">
         <li class="sidebar-brand">
-          <a class="js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-        </li>
-        <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#page-top">Home</a>
+          <a class="js-scroll-trigger" href="#page-top">CrimsonHacks 2018</a>
         </li>
         <li class="sidebar-nav-item">
           <a class="js-scroll-trigger" href="#about">About</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#services">Services</a>
+          <a class="js-scroll-trigger" href="#faqs">FAQS</a>
         </li>
         <li class="sidebar-nav-item">
-          <a class="js-scroll-trigger" href="#portfolio">Portfolio</a>
+          <a class="js-scroll-trigger" href="#sponsors">Sponsors</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="#testimonials">Testimonials</a>
         </li>
         <li class="sidebar-nav-item">
           <a class="js-scroll-trigger" href="#contact">Contact</a>
@@ -52,13 +53,14 @@
     </nav>
 
     <!-- Header -->
-    <header class="masthead d-flex">
+    <header class="masthead header">
       <div class="container text-center my-auto">
-        <h1 class="mb-1">Stylish Portfolio</h1>
+        <!-- <h1 class="mb-1">CrimsonHacks</h1>
         <h3 class="mb-5">
-          <em>A Free Bootstrap Theme by Start Bootstrap</em>
-        </h3>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
+          <em>Tuscaloosa, AL</em>
+        </h3> -->
+        <img class="inside-img" src="img/web-logo.png" alt="CrimsonHacks Logo" />
+        <a class="btn btn-primary btn-xl js-scroll-trigger crimson-bg" href="#">Register</a>
       </div>
       <div class="overlay"></div>
     </header>
@@ -68,43 +70,178 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h2>Stylish Portfolio is the perfect theme for your next project!</h2>
-            <p class="lead mb-5">This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at
-              <a href="https://unsplash.com/">Unsplash</a>!</p>
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">What We Offer</a>
+            <h2 class="grey-tx">WHAT IS <span class="crimson-tx">CRIMSON</span><span class="hacks-tx">HACKS</span>?</h2>
+            <p class="lead mb-5">
+              At its core, <span class="crimson-tx">Crimson</span><span class="hacks-tx">Hacks</span> is about bringing hackers from all over the south for a weekend of innovation. We are the first Major League Hacking member event in the state of Alabama. For 24 hours, 200 students from around the southeast will come together in Tuscaloosa at The University of Alabama campus for a innovation, free food, and of course, free swag. We're looking forward to seeing you in Tuscaloosa!
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section class="content-section bg-primary text-white text-center" id="services">
+    <!-- Callout -->
+<!--     <section class="callout">
+      <div class="container text-center">
+        <h2 class="mx-auto mb-5">Welcome to
+          <em>your</em>
+          next website!</h2>
+        <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/template-overviews/stylish-portfolio/">Download Now!</a>
+      </div>
+    </section> -->
+
+    <!-- Portfolio -->
+    <section class="content-section bg-primary text-white" id="faqs">
+      <div class="container">
+        <div class="content-section-heading text-center">
+          <h3 class="text-secondary mb-0">FAQS</h3>
+          <h2 class="mb-5">Some Questions</h2>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6">
+            <div class="portfolio-item" id="faq-1" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Definition</h2>
+                  <p class="mb-0 questions">What is a hackathon?</p>
+                  <p class="answers">A <i>hackathon</i> is short for "hacking marathon." We're doing the <a href="https://en.wikipedia.org/wiki/Hacker_culture" class="red-tx">fun, legal hacking</a>, not the <a href="https://en.wikipedia.org/wiki/Security_hacker" class="red-tx">bad kind</a>. We offer a space for hackers, innovators, and creators to come together for a weekend to create something meaningful.</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/hackathon-2.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="portfolio-item" id="faq-3" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Things</h2>
+                  <p class="mb-0 questions">What should I bring?</p>
+                  <p class="answers">Make sure you have a photo ID, laptop (and any other devices you want to use), chargers, toiletries, a change of clothes, and a passion for learning!</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/things-3.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="portfolio-item" id="faq-4" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Cost</h2>
+                  <p class="mb-0 questions">How much does CrimsonHacks cost?</p>
+                  <p class="answers">Absolutely nothing. We'll provide free food, venue, wifi, swag, etc. for the event. Just bring you and your friends!</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/bitcoin.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="portfolio-item" id="faq-2" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Team</h2>
+                  <p class="mb-0 questions">What if I don't have a team?</p>
+                  <p class="answers">That’s totally fine! We’ll have a team-forming event right before development starts. If you want to form a team beforehand, we encourage you to use our Facebook page and #teamforming Slack channel to link up!</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/team-2.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="portfolio-item" id="faq-5" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Health</h2>
+                  <p class="mb-0 questions">What about sleeping?</p>
+                  <p class="answers">Don't forget a pillow, blankets, and a sleeping bag! We'll have designated quiet areas if you need to get some shut-eye. You'll probably be hacking away, though!</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/sleep-2.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="portfolio-item" id="faq-6" href="#">
+              <span class="caption">
+                <span class="caption-content">
+                  <h2>Work</h2>
+                  <p class="mb-0 questions">What if I can't code?</p>
+                  <p class="answers">That's okay, we'll teach you. If you aren't interested in coding, there are plenty of other things you can do - attend workshops, contribute your other awesome skills, and network with participants and sponsors.</p>
+                </span>
+              </span>
+              <img class="img-fluid" src="img/code.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sponsors -->
+    <section class="content-section text-center bg-light" id="sponsors">
       <div class="container">
         <div class="content-section-heading">
-          <h3 class="text-secondary mb-0">Services</h3>
-          <h2 class="mb-5">What We Offer</h2>
+          <h3 class="text-secondary mb-0">Sponsors</h3>
+          <h2 class="mb-2">Big Applause to Our Amazing Sponsors</h2>
+          <img src="img/logo_placeholder.png" alt="" class="inside-img">
+          <div class="row mb-5">
+            <div class="col-lg-6 col-md-12">
+              <img src="img/logo_placeholder.png" alt="" class="inside-img">
+            </div>
+            <div class="col-lg-6 col-md-12">
+              <img src="img/lockheed.png" alt="lockhead martin logo" class="inside-img">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-8">
+              <img src="img/pwc.png" alt="pwc logo" class="inside-img">
+            </div>
+            <div class="col-lg-4 col-md-8">
+              <img src="img/ip.png" alt="international paper logo" class="inside-img ip">
+            </div>
+            <div class="col-lg-4 col-md-8">
+              <img src="img/ugo.png" alt="ugo logo" class="inside-img">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="content-section text-center bg-dark text-white" id="testimonials">
+      <div class="container">
+        <div class="content-section-heading">
+          <h3 class="text-secondary mb-0">Testimonials</h3>
+          <h2 class="mb-5">What Participants Say About Us</h2>
         </div>
         <div class="row">
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
+          <div class="col-lg-4 col-md-8 mb-5 mb-lg-0">
+            <!-- <span class="service-icon rounded-circle mx-auto mb-3">
               <i class="icon-screen-smartphone"></i>
             </span>
             <h4>
               <strong>Responsive</strong>
             </h4>
-            <p class="text-faded mb-0">Looks great on any screen size!</p>
+            <p class="text-faded mb-0">Looks great on any screen size!</p> -->
+            <div class="team-member">
+              <img src="img/evan.jpg" alt="First Participant" class="rounded-circle mx-auto mb-3">
+              <h4>Evan Dwyer</h4>
+              <p class="text-faded mb-0">“It was a great experience to be surrounded by people with original ideas and impressive skills. Everyone’s projects were so cool!”</p>
+            </div>
           </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
+          <div class="col-lg-4 col-md-8 mb-5 mb-lg-0">
+            <!-- <span class="service-icon rounded-circle mx-auto mb-3">
               <i class="icon-pencil"></i>
             </span>
             <h4>
               <strong>Redesigned</strong>
             </h4>
-            <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p>
+            <p class="text-faded mb-0">Freshly redesigned for Bootstrap 4.</p> -->
+            <div class="team-member">
+              <img src="img/michelle.jpg" alt="Second participant" class="rounded-circle mx-auto mb-3">
+              <h4>Michelle Pearson</h4>
+              <p class="text-faded mb-0">“CrimsonHacks was a great opportunity to learn new tools and languages while coding with my friends!”</p>
+            </div>
           </div>
-          <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-            <span class="service-icon rounded-circle mx-auto mb-3">
+          <div class="col-lg-4 col-md-8 mb-5 mb-md-0">
+            <!-- <span class="service-icon rounded-circle mx-auto mb-3">
               <i class="icon-like"></i>
             </span>
             <h4>
@@ -112,82 +249,12 @@
             </h4>
             <p class="text-faded mb-0">Millions of users
               <i class="fa fa-heart"></i>
-              Start Bootstrap!</p>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <span class="service-icon rounded-circle mx-auto mb-3">
-              <i class="icon-mustache"></i>
-            </span>
-            <h4>
-              <strong>Question</strong>
-            </h4>
-            <p class="text-faded mb-0">I mustache you a question...</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Callout -->
-    <section class="callout">
-      <div class="container text-center">
-        <h2 class="mx-auto mb-5">Welcome to
-          <em>your</em>
-          next website!</h2>
-        <a class="btn btn-primary btn-xl" href="https://startbootstrap.com/template-overviews/stylish-portfolio/">Download Now!</a>
-      </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section class="content-section" id="portfolio">
-      <div class="container">
-        <div class="content-section-heading text-center">
-          <h3 class="text-secondary mb-0">Portfolio</h3>
-          <h2 class="mb-5">Recent Projects</h2>
-        </div>
-        <div class="row no-gutters">
-          <div class="col-lg-6">
-            <a class="portfolio-item" href="#">
-              <span class="caption">
-                <span class="caption-content">
-                  <h2>Stationary</h2>
-                  <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
-                </span>
-              </span>
-              <img class="img-fluid" src="img/portfolio-1.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-lg-6">
-            <a class="portfolio-item" href="#">
-              <span class="caption">
-                <span class="caption-content">
-                  <h2>Ice Cream</h2>
-                  <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
-                </span>
-              </span>
-              <img class="img-fluid" src="img/portfolio-2.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-lg-6">
-            <a class="portfolio-item" href="#">
-              <span class="caption">
-                <span class="caption-content">
-                  <h2>Strawberries</h2>
-                  <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
-                </span>
-              </span>
-              <img class="img-fluid" src="img/portfolio-3.jpg" alt="">
-            </a>
-          </div>
-          <div class="col-lg-6">
-            <a class="portfolio-item" href="#">
-              <span class="caption">
-                <span class="caption-content">
-                  <h2>Workspace</h2>
-                  <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
-                </span>
-              </span>
-              <img class="img-fluid" src="img/portfolio-4.jpg" alt="">
-            </a>
+              Start Bootstrap!</p> -->
+              <div class="team-member">
+              <img src="img/isuru.jpg" alt="Third participant" class="rounded-circle mx-auto mb-3">
+              <h4>Isuru Nanayakkara</h4>
+              <p class="text-faded mb-0">“I had never been to a hackathon before and didn’t know what to expect, but I ended up having an awesome time and learned so much!”</p>
+            </div>
           </div>
         </div>
       </div>
@@ -196,15 +263,15 @@
     <!-- Call to Action -->
     <section class="content-section bg-primary text-white">
       <div class="container text-center">
-        <h2 class="mb-4">The buttons below are impossible to resist...</h2>
-        <a href="#" class="btn btn-xl btn-light mr-4">Click Me!</a>
-        <a href="#" class="btn btn-xl btn-dark">Look at Me!</a>
+        <h2 class="mb-4">Excited yet? Let's be a part of CrimsonHacks 2018!</h2>
+        <a href="#" class="btn btn-xl btn-light mr-4">Register</a>
+        <a href="#" class="btn btn-xl btn-dark">Volunteer</a>
       </div>
     </section>
 
     <!-- Map -->
     <section id="contact" class="map">
-      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+      <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3337.9861935251183!2d-87.54764594883709!3d33.21445818074813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x888602a5d57c8ebd%3A0x2a3193fd6d713158!2sFerguson+Student+Center!5e0!3m2!1sen!2sus!4v1517388662866"></iframe>
       <br/>
       <small>
         <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
@@ -216,24 +283,34 @@
       <div class="container">
         <ul class="list-inline mb-5">
           <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white mr-3" href="#">
+            <a class="social-link rounded-circle text-white mr-2" target="_blank" href="http://facebook.com/crimsonhacks">
               <i class="icon-social-facebook"></i>
             </a>
           </li>
           <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white mr-3" href="#">
+            <a class="social-link rounded-circle text-white mr-2" target="_blank" href="http://twitter.com/crimsonhacks">
               <i class="icon-social-twitter"></i>
             </a>
           </li>
           <li class="list-inline-item">
-            <a class="social-link rounded-circle text-white" href="#">
-              <i class="icon-social-github"></i>
+            <a class="social-link rounded-circle text-white mr-2" target="_blank" href="http://instagram.com/crimsonhacks">
+              <i class="icon-social-instagram"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="social-link rounded-circle text-white" target="_blank" href="mailto:hello@crimsonhacks.com?Subject=Hello">
+              <i class="icon-envelope"></i>
             </a>
           </li>
         </ul>
-        <p class="text-muted small mb-0">Copyright &copy; Your Website 2017</p>
+        <p class="text-muted small mb-0">Copyright &copy; CrimsonHacks 2018</p>
       </div>
     </footer>
+
+    <!-- MLH Badge -->
+    <a class="MLH-badge" href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=white">
+      <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2018 Hackathon Season">
+    </a>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
@@ -249,6 +326,7 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/stylish-portfolio.min.js"></script>
+    <script src="js/script.js"></script>
 
   </body>
 

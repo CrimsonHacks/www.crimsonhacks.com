@@ -1,0 +1,56 @@
+/*.crimson-bg {
+	background-color: #AD282D !important;
+	border-color: #AD282D !important;
+}*/
+
+.crimson-tx {
+	color: #AF2628;
+}
+
+.hacks-tx {
+	color: #333;
+	font-weight: 600;
+}
+
+.grey-tx {
+	color: #B7B7B7;
+}
+
+.red-tx {
+	color: #EBC62C;
+}
+
+.MLH-badge {
+	display: block;
+	max-width: 100px;
+	min-width: 60px;
+	position: fixed;
+	left: 50px;
+	top: 0;
+	top: 0;
+	width: 10%;
+	z-index: 10000;
+}
+
+.team-member img {
+	max-width: 33%;
+}
+
+.inside-img {
+ max-width: 100%;
+ max-height: 100%;
+}
+
+.questions {
+	font-size: 2rem !important;
+}
+
+.header {
+	min-height: 100%;
+}
+
+@media (min-width: 992px) {
+	.ip {
+		margin-top: 50px;
+	}
+}

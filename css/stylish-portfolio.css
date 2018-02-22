@@ -39,7 +39,7 @@ h6 {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Map */
+/*Map */
 .map {
   height: 30rem;
 }
@@ -87,7 +87,7 @@ h6 {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/bg-masthead.jpg");
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/img_background.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -121,7 +121,7 @@ h6 {
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background: #1D809F;
+  background: #AD282D;
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -204,7 +204,7 @@ h6 {
 
 .service-icon {
   background-color: #fff;
-  color: #1D809F;
+  color: #AD282D;
   height: 7rem;
   width: 7rem;
   display: block;
@@ -233,6 +233,7 @@ h6 {
   position: relative;
   overflow: hidden;
   max-width: 530px;
+  max-height: 370px;
   margin: auto auto 1rem;
 }
 
@@ -249,7 +250,11 @@ h6 {
 
 .portfolio-item .caption .caption-content {
   color: #fff;
-  margin: auto 2rem 2rem;
+  position: absolute;
+  /*left: 0.5rem;*/
+  top: 60%;
+  /*margin: auto 2rem 2rem;*/
+  /*margin-top: 2rem;*/
 }
 
 .portfolio-item .caption .caption-content h2 {
@@ -260,6 +265,18 @@ h6 {
 .portfolio-item .caption .caption-content p {
   font-weight: 300;
   font-size: 1.2rem;
+}
+
+.portfolio-item .caption .caption-content .questions {
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.portfolio-item:hover .caption {
+  background-color: rgba(23,48,80,0.8);
 }
 
 @media (min-width: 992px) {
@@ -288,9 +305,30 @@ h6 {
     clip-path: inset(2rem);
   }
   .portfolio-item:hover .caption {
-    background-color: rgba(29, 128, 159, 0.9);
+    background-color: rgba(23,48,80,0.8);
     -webkit-clip-path: inset(2rem);
     clip-path: inset(2rem);
+  }
+}
+
+@media (max-width: 992px) {
+  .portfolio-item .caption .caption-content {
+    left: 10%;
+  }
+
+  .portfolio-item .questions {
+    font-size: 24px !important;
+  }
+
+  .portfolio-item .answers {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  footer.footer .social-link {
+    width: 3rem;
+    height: 3rem;
   }
 }
 
@@ -305,33 +343,33 @@ footer.footer .social-link {
   width: 4rem;
   line-height: 4.3rem;
   font-size: 1.5rem;
-  background-color: #1D809F;
+  background-color: #AD282D;
   transition: background-color 0.15s ease-in-out;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 footer.footer .social-link:hover {
-  background-color: #155d74;
+  background-color: #9F2C33;
   text-decoration: none;
 }
 
 a {
-  color: #1D809F;
+  color: #AD282D;
 }
 
 a:hover, a:focus, a:active {
-  color: #155d74;
+  color: #9F2C33;
 }
 
 .btn-primary {
-  background-color: #1D809F !important;
-  border-color: #1D809F !important;
+  background-color: #AD282D !important;
+  border-color: #AD282D !important;
   color: #fff !important;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #155d74 !important;
-  border-color: #155d74 !important;
+  background-color: #9F2C33 !important;
+  border-color: #9F2C33 !important;
 }
 
 .btn-secondary {
@@ -355,11 +393,11 @@ a:hover, a:focus, a:active {
 }
 
 .bg-primary {
-  background-color: #1D809F !important;
+  background-color: #AD282D !important;
 }
 
 .text-primary {
-  color: #1D809F !important;
+  color: #AD282D !important;
 }
 
 .text-secondary {
