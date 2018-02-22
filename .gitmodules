@@ -1,0 +1,3 @@
+[submodule "expo"]
+	path = expo
+	url = git@personal.github.com:CrimsonHacks/expo
