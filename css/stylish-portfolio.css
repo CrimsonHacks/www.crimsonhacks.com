@@ -39,7 +39,7 @@ h6 {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/*Map */
+/* Map */
 .map {
   height: 30rem;
 }
@@ -233,7 +233,6 @@ h6 {
   position: relative;
   overflow: hidden;
   max-width: 530px;
-  max-height: 370px;
   margin: auto auto 1rem;
 }
 
@@ -250,11 +249,7 @@ h6 {
 
 .portfolio-item .caption .caption-content {
   color: #fff;
-  position: absolute;
-  /*left: 0.5rem;*/
-  top: 60%;
-  /*margin: auto 2rem 2rem;*/
-  /*margin-top: 2rem;*/
+  margin: auto 2rem 2rem;
 }
 
 .portfolio-item .caption .caption-content h2 {
@@ -265,18 +260,6 @@ h6 {
 .portfolio-item .caption .caption-content p {
   font-weight: 300;
   font-size: 1.2rem;
-}
-
-.portfolio-item .caption .caption-content .questions {
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-}
-
-.portfolio-item:hover .caption {
-  background-color: rgba(23,48,80,0.8);
 }
 
 @media (min-width: 992px) {
@@ -305,30 +288,9 @@ h6 {
     clip-path: inset(2rem);
   }
   .portfolio-item:hover .caption {
-    background-color: rgba(23,48,80,0.8);
+    background-color: rgba(173, 40, 45, 0.9);
     -webkit-clip-path: inset(2rem);
     clip-path: inset(2rem);
-  }
-}
-
-@media (max-width: 992px) {
-  .portfolio-item .caption .caption-content {
-    left: 10%;
-  }
-
-  .portfolio-item .questions {
-    font-size: 24px !important;
-  }
-
-  .portfolio-item .answers {
-    font-size: 16px !important;
-  }
-}
-
-@media (max-width: 420px) {
-  footer.footer .social-link {
-    width: 3rem;
-    height: 3rem;
   }
 }
 
@@ -349,7 +311,7 @@ footer.footer .social-link {
 }
 
 footer.footer .social-link:hover {
-  background-color: #9F2C33;
+  background-color: #841e22;
   text-decoration: none;
 }
 
@@ -358,18 +320,18 @@ a {
 }
 
 a:hover, a:focus, a:active {
-  color: #9F2C33;
+  color: #841e22;
 }
 
 .btn-primary {
-  background-color: #AD282D !important;
+  background-color: red !important;
   border-color: #AD282D !important;
   color: #fff !important;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #9F2C33 !important;
-  border-color: #9F2C33 !important;
+  background-color: #841e22 !important;
+  border-color: #841e22 !important;
 }
 
 .btn-secondary {
