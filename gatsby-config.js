@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
     title: "CrimsonHacks 2019",
@@ -14,6 +16,14 @@ module.exports = {
     "gatsby-plugin-styled-components",
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
+
+    // MailChimp
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint: process.env.MAILCHIMP_URL,
+      },
+    },
 
     {
       resolve: "gatsby-plugin-layout",
