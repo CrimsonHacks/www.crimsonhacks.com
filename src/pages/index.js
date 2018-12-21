@@ -59,6 +59,13 @@ function IndexPage() {
             <h2>Returning March 23, 2019</h2>
 
             <SubscriptionForm />
+            <a
+              href="https://mlh.io/code-of-conduct"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Code of Conduct
+            </a>
           </div>
         </Container>
       )}
