@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 // UIs
-import Button from "./Button"
+import { Button } from "ui"
 import TextField from "./TextField"
 
 const Message = styled.p`
