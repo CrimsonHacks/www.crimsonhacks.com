@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export default styled.input`
+const TextField = styled.input`
   display: inline-block;
   padding: 1rem 2rem;
   font-family: "Source Sans Pro", sans-serif;
@@ -10,3 +10,5 @@ export default styled.input`
   border: 0;
   box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
 `
+
+export default TextField
