@@ -2,8 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import addToMailchimp from "gatsby-plugin-mailchimp"
 // UIs
-import { Button } from "ui"
-import TextField from "./TextField"
+import { Button, TextField } from "ui"
 
 const Message = styled.p`
   color: ${props => (props.status === "error" ? "red" : "green")};
@@ -50,16 +49,13 @@ class SubscriptionForm extends React.Component {
     e.preventDefault()
 
     const email = document.getElementById("email").value
-    console.log(email)
-
     const data = await addToMailchimp(email)
-    console.log("here")
     this.setState({ status: data.result, message: data.msg })
   }
 
   render() {
     const { status, message } = this.state
-    console.log(status, message)
+
     return (
       <Form>
         <div>

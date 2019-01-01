@@ -40,7 +40,7 @@ function IndexPage() {
         {
           logo: file(relativePath: { regex: "/logo.png/" }) {
             childImageSharp {
-              fixed(width: 300) {
+              fixed(width: 240) {
                 ...GatsbyImageSharpFixed_tracedSVG
               }
             }
@@ -53,7 +53,7 @@ function IndexPage() {
             <Image
               alt="CrimsonHacks logo"
               fixed={data.logo.childImageSharp.fixed}
-              style={{ maxWidth: 300, margin: "0 auto" }}
+              style={{ maxWidth: 240, width: "100%", margin: "0 auto" }}
             />
 
             <h2>Returning March 23, 2019</h2>
