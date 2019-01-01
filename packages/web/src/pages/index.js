@@ -1,26 +1,14 @@
 import React from "react"
-import styled, { css } from "styled-components"
 import { StaticQuery, graphql } from "gatsby"
-// UIs
+import styled from "styled-components"
 import Image from "gatsby-image"
+// UIs
+import BgContainer from "../components/BgContainer"
 import SubscriptionForm from "../components/SubscriptionForm"
-// Images
-import background from "../assets/background.png"
 
-const backgroundCss = css`
-  background: url(${background});
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-`
-
-const Container = styled.div`
-  width: 100%;
-  height: 100%;
+const Container = styled(BgContainer)`
   font-family: "Source Sans Pro", sans-serif;
   padding-top: 10%;
-
-  ${backgroundCss}
 
   & > div {
     text-align: center;
