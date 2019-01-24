@@ -8,9 +8,9 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "yarn workspace web start",
     "build": "yarn workspace web build",
-    "serve": "yarn workspace web serve",
+    "web": "yarn workspace web start",
+    "server": "yarn workspace server dev",
     "ui": "yarn workspace ui storybook"
   }
 }

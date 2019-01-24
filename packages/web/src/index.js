@@ -3,16 +3,20 @@ import SEO from "./components/SEO"
 import BaseStyle from "./components/BaseStyle"
 import MLHBadge from "./components/MLHBadge/MLHBadge"
 
-function App({ children }) {
-  return (
-    <React.Fragment>
-      <SEO />
-      <BaseStyle />
-      <MLHBadge />
+class App extends React.Component {
+  render() {
+    const { location, children } = this.props
 
-      {children}
-    </React.Fragment>
-  )
+    return (
+      <React.Fragment>
+        <SEO />
+        <BaseStyle />
+        <MLHBadge location={location} />
+
+        {children}
+      </React.Fragment>
+    )
+  }
 }
 
 export default App

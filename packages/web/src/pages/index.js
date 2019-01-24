@@ -1,8 +1,7 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import Image from "gatsby-image"
 // UIs
+import Logo from "../components/Logo"
 import BgContainer from "../components/BgContainer"
 import SubscriptionForm from "../components/SubscriptionForm"
 
@@ -21,36 +20,16 @@ const Container = styled(BgContainer)`
   }
 `
 
-function IndexPage() {
+function IndexPage({ navigate }) {
   return (
-    <StaticQuery
-      query={graphql`
-        {
-          logo: file(relativePath: { regex: "/logo.png/" }) {
-            childImageSharp {
-              fixed(width: 240) {
-                ...GatsbyImageSharpFixed_tracedSVG
-              }
-            }
-          }
-        }
-      `}
-      render={data => (
-        <Container>
-          <div>
-            <Image
-              alt="CrimsonHacks logo"
-              fixed={data.logo.childImageSharp.fixed}
-              style={{ maxWidth: 240, width: "100%", margin: "0 auto" }}
-            />
+    <Container>
+      <div>
+        <Logo />
+        <h2>Returning March 23, 2019</h2>
 
-            <h2>Returning March 23, 2019</h2>
-
-            <SubscriptionForm />
-          </div>
-        </Container>
-      )}
-    />
+        <SubscriptionForm />
+      </div>
+    </Container>
   )
 }
 

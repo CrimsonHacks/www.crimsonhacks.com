@@ -11,6 +11,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "dotenv": "^6.2.0",
     "formik": "^1.4.1",
     "gatsby": "^2.0.73",
@@ -24,6 +25,7 @@
     "gatsby-source-filesystem": "^2.0.12",
     "gatsby-transformer-sharp": "^2.1.9",
     "prop-types": "^15.6.2",
+    "questions": "0.1.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.2.0",

@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-const TextField = styled.input`
+const TextArea = styled.textarea`
   display: inline-block;
   padding: 1rem 2rem;
   font-family: "Source Sans Pro", sans-serif;
@@ -16,4 +16,4 @@ const TextField = styled.input`
   }
 `
 
-export default TextField
+export default TextArea

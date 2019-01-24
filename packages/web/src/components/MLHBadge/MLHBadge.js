@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { StaticQuery, graphql } from "gatsby"
 import SVG from "./SVG"
 
 const StyledMLHBadge = styled.a`
@@ -17,15 +18,37 @@ const StyledMLHBadge = styled.a`
   }
 `
 
-function MLHBadge() {
+function MLHBadge({ location }) {
   return (
-    <StyledMLHBadge
-      id="mlh-trust-badge"
-      href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white"
-      target="_blank"
-    >
-      <SVG />
-    </StyledMLHBadge>
+    <StaticQuery
+      query={graphql`
+        {
+          site {
+            siteMetadata {
+              showMLH
+            }
+          }
+        }
+      `}
+      render={({
+        site: {
+          siteMetadata: { showMLH },
+        },
+      }) => {
+        if (showMLH.includes(location.pathname)) {
+          return (
+            <StyledMLHBadge
+              id="mlh-trust-badge"
+              href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white"
+              target="_blank"
+            >
+              <SVG />
+            </StyledMLHBadge>
+          )
+        }
+        return null
+      }}
+    />
   )
 }
 
