@@ -1,7 +1,7 @@
 import { navigate } from "gatsby"
 
 function Private({ willRedirect, children }) {
-  if (!localStorage.getItem("user")) {
+  if (window && !localStorage.getItem("user")) {
     if (willRedirect) navigate("/sign-in")
     return null
   }
