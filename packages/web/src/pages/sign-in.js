@@ -76,12 +76,6 @@ class SignUpPage extends React.Component {
   state = { error: "", message: "" }
 
   render() {
-    const token = localStorage.getItem("accessToken")
-    if (token) {
-      this.props.navigate("/dashboard")
-      return null
-    }
-
     const { error, message } = this.state
 
     return (
@@ -103,34 +97,36 @@ class SignUpPage extends React.Component {
               return errors
             }}
             onSubmit={async (values, { setSubmitting }) => {
-              try {
-                const res = await axios.post(
-                  `${process.env.GATSBY_API_URL}/sign-in`,
-                  values,
-                )
+              if (typeof window !== "undefined") {
+                try {
+                  const res = await axios.post(
+                    `${process.env.GATSBY_API_URL}/sign-in`,
+                    values,
+                  )
 
-                console.log(res)
+                  console.log(res)
 
-                const { token, user, message } = res.data
+                  const { token, user, message } = res.data
 
-                if (token) {
-                  localStorage.setItem("accessToken", token)
-                  localStorage.setItem("user", JSON.stringify(user))
-                  this.setState({ error: "" })
-                  this.props.navigate("/dashboard")
-                } else {
-                  this.setState({ error: "", message })
+                  if (token) {
+                    localStorage.setItem("accessToken", token)
+                    localStorage.setItem("user", JSON.stringify(user))
+                    this.setState({ error: "" })
+                    this.props.navigate("/dashboard")
+                  } else {
+                    this.setState({ error: "", message })
+                  }
+                } catch (e) {
+                  console.error(e)
+                  console.error(e.response)
+                  const errorMessage =
+                    e.response.data.message ||
+                    "An unknown error has occured. Please try again."
+                  this.setState({ error: errorMessage })
                 }
-              } catch (e) {
-                console.error(e)
-                console.error(e.response)
-                const errorMessage =
-                  e.response.data.message ||
-                  "An unknown error has occured. Please try again."
-                this.setState({ error: errorMessage })
-              }
 
-              setSubmitting(false)
+                setSubmitting(false)
+              }
             }}
           >
             {({ isSubmitting }) => (

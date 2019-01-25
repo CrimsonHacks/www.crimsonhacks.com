@@ -74,7 +74,13 @@ function Nav() {
           <Button as={Link} to="/register">
             Application
           </Button>
-          <Button as={Link} to="/" onClick={() => localStorage.clear()}>
+          <Button
+            as={Link}
+            to="/"
+            onClick={() =>
+              typeof window !== "undefined" && localStorage.clear()
+            }
+          >
             Logout
           </Button>
         </Links>

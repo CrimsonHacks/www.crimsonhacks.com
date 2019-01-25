@@ -95,45 +95,47 @@ class Application extends React.Component {
               return errors
             }}
             onSubmit={async (values, { setSubmitting }) => {
-              try {
-                // Handle resume
-                if (typeof values.resume !== "string") {
-                  const {
-                    data: { url },
-                  } = await axios.get(`${URL}/upload`, {
+              if (typeof window !== "undefined") {
+                try {
+                  // Handle resume
+                  if (typeof values.resume !== "string") {
+                    const {
+                      data: { url },
+                    } = await axios.get(`${URL}/upload`, {
+                      headers: { Authorization: TOKEN },
+                    })
+
+                    await axios.put(url, values.resume, {
+                      headers: {
+                        "Content-Type": values.resume.type,
+                      },
+                    })
+
+                    values.resume = url.substring(0, url.indexOf(".pdf") + 4)
+                  }
+
+                  // Submit the data
+                  await axios.post(`${URL}/application`, values, {
                     headers: { Authorization: TOKEN },
                   })
+                  navigate("/dashboard")
+                } catch (error) {
+                  console.error(error)
+                  console.error(error.response)
 
-                  await axios.put(url, values.resume, {
-                    headers: {
-                      "Content-Type": values.resume.type,
-                    },
-                  })
+                  let errorMessage =
+                    "An unknown error has occurred. Please try again."
+                  if (
+                    error.response &&
+                    error.response.data &&
+                    error.response.data.message
+                  )
+                    errorMessage = error.response.data.message
 
-                  values.resume = url.substring(0, url.indexOf(".pdf") + 4)
+                  this.setState({ error: errorMessage })
                 }
-
-                // Submit the data
-                await axios.post(`${URL}/application`, values, {
-                  headers: { Authorization: TOKEN },
-                })
-                navigate("/dashboard")
-              } catch (error) {
-                console.error(error)
-                console.error(error.response)
-
-                let errorMessage =
-                  "An unknown error has occurred. Please try again."
-                if (
-                  error.response &&
-                  error.response.data &&
-                  error.response.data.message
-                )
-                  errorMessage = error.response.data.message
-
-                this.setState({ error: errorMessage })
+                setSubmitting(false)
               }
-              setSubmitting(false)
             }}
           >
             {({ isSubmitting }) => (
