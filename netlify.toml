@@ -1,0 +1,3 @@
+[build]
+  publish = "packages/web/public"
+  command = "yarn build"
