@@ -5,7 +5,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development nodemon src/index.js --exec babel-node"
+    "dev": "NODE_ENV=development nodemon src/index.js --exec babel-node",
+    "build": "yarn clean && NODE_ENV=production babel src -d build",
+    "clean": "rm -rf build"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
