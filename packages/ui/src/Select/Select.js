@@ -10,6 +10,7 @@ const StyledSelect = styled.div`
     width: 100%;
     display: inline-block;
     padding: 1rem 2rem;
+    background: #fff;
     font-family: "Source Sans Pro", sans-serif;
     font-size: 2rem;
     font-weight: 700;

@@ -61,6 +61,8 @@ function getEmailError(email) {
     return "Required"
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
     return "Invalid email address"
+  } else if (!email.includes(".edu")) {
+    return "Please use your .edu email"
   }
 }
 

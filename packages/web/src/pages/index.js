@@ -3,7 +3,8 @@ import styled from "styled-components"
 // UIs
 import Logo from "../components/Logo"
 import BgContainer from "../components/BgContainer"
-import SubscriptionForm from "../components/SubscriptionForm"
+import { Button } from "ui"
+// import SubscriptionForm from "../components/SubscriptionForm"
 
 const Container = styled(BgContainer)`
   font-family: "Source Sans Pro", sans-serif;
@@ -27,7 +28,7 @@ function IndexPage({ navigate }) {
         <Logo />
         <h2>Returning March 23, 2019</h2>
 
-        <SubscriptionForm />
+        <Button onClick={() => navigate("/sign-in")}>Register</Button>
       </div>
     </Container>
   )

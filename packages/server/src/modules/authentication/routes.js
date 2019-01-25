@@ -54,9 +54,11 @@ router.post("/sign-in", async (req, res) => {
 
       sendVerificationEmail(email)
 
-      res
-        .status(200)
-        .send({ token: null, user: null, message: "Please confirm you email." })
+      res.status(200).send({
+        token: null,
+        user: null,
+        message: "Please confirm your email.",
+      })
     }
   } catch (error) {
     throwError(res, error)
