@@ -13,7 +13,6 @@ function Upload({ name, accept, formik, children }) {
   const value = getIn(formik.values, name)
 
   function renderValue() {
-    console.log("hmm")
     if (typeof value === "string") {
       return (
         <a href={value} target="_blank" rel="noopener noreferrer">

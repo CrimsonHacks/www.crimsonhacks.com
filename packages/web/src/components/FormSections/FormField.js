@@ -48,7 +48,7 @@ function CustomSelect({ field, ...props }) {
 }
 
 function CustomCheckBox({ field, ...props }) {
-  return <CheckBox {...field} {...props} />
+  return <CheckBox checked={field.value} {...field} {...props} />
 }
 
 function FormField({ formik, question }) {

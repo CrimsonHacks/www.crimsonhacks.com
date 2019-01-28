@@ -74,7 +74,14 @@ class Application extends React.Component {
 
     if (application) {
       initialValues = application
+      initialValues.coc = true
+      initialValues.authorize = true
+    } else {
+      initialValues.coc = false
+      initialValues.authorize = false
     }
+
+    console.log(initialValues)
 
     return (
       <Layout>
@@ -91,6 +98,13 @@ class Application extends React.Component {
                   checkRequired(question, values, errors)
                 })
               })
+
+              if (!values.coc) errors.coc = "Required"
+              if (!values.authorize) errors.authorize = "Required"
+
+              console.log("here")
+              console.log(values)
+              console.log(errors)
 
               return errors
             }}

@@ -106,8 +106,6 @@ class SignUpPage extends React.Component {
                     values,
                   )
 
-                  console.log(res)
-
                   const { token, user, message } = res.data
 
                   if (token) {
@@ -119,8 +117,6 @@ class SignUpPage extends React.Component {
                     this.setState({ error: "", message })
                   }
                 } catch (e) {
-                  console.error(e)
-                  console.error(e.response)
                   const errorMessage =
                     e.response.data.message ||
                     "An unknown error has occured. Please try again."
