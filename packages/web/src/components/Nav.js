@@ -71,7 +71,7 @@ function Nav() {
           <Button as={Link} to="/dashboard">
             Dashboard
           </Button>
-          <Button as={Link} to="/register">
+          <Button as={Link} to="/apply">
             Application
           </Button>
           <Button
