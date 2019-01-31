@@ -45,7 +45,7 @@ class VerifyPage extends React.Component {
         <div>
           <p>
             Thank you for verifying your account. Please{" "}
-            <Link to="/sign-in">click here</Link> to sign in.
+            <Link to="/">click here</Link> to sign in.
           </p>
         </div>
       )

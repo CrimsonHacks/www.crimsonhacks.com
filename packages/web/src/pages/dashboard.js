@@ -47,7 +47,7 @@ class DashboardPage extends React.Component {
     )
 
     if (res.data.status === "INCOMPLETE") {
-      this.props.navigate("/register")
+      this.props.navigate("/apply")
     }
 
     this.setState({ loading: false, status: res.data.status })
