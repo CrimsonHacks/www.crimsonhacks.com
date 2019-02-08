@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+// Props passed down to the HTML input.
+
 const TextField = styled.input`
   display: inline-block;
   padding: 1rem 2rem;
@@ -15,5 +17,9 @@ const TextField = styled.input`
     opacity: 0.7;
   }
 `
+
+TextField.defaultProps = {
+  type: 'text'
+}
 
 export default TextField

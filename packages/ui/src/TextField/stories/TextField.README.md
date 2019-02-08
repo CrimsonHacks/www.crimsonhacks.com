@@ -3,7 +3,13 @@
 #### Usage
 ```jsx
 <TextField
-  type="text"
+  placeholder="Placeholder"
+  onChange=Function()>
+```
+
+#### Example
+```jsx
+<TextField
   placeholder="Hello"
   onChange={e => console.log(e.target.value)}
 />
