@@ -3,9 +3,10 @@
 A functional checkbox component.
 
 #### Usage
+
 ```jsx
-<CheckBox 
-  checked={true}
+<CheckBox
+  checked={true
   onChange=Function()
   label="Label"/>
 ```
@@ -20,13 +21,17 @@ class TestCheckBox extends React.Component {
   // Anonymous function so that it has the right 'this'.
   toggle = () => {
     this.setState(prevState => ({
-      checked: !prevState.checked
+      checked: !prevState.checked,
     }))
   }
 
   render() {
     return (
-      <CheckBox checked={this.state.checked} onChange={this.toggle} label="Hello"/>
+      <CheckBox
+        checked={this.state.checked}
+        onChange={this.toggle}
+        label="Hello"
+      />
     )
   }
 }
