@@ -85,4 +85,31 @@ router.post("/verify", async (req, res) => {
   }
 })
 
+router.post("/resend", async (req, res) => {
+  try {
+    let { email } = req.body
+    email = email.toLowerCase()
+
+    const foundUser = await users.findOne({ email })
+
+    if (foundUser) {
+      if (!foundUser.isVerified) {
+        sendVerificationEmail(email)
+        res.sendStatus(200)
+      } else {
+        res.status(403).send({
+          message: "User already verified.",
+        })
+      }
+    } else {
+      res.status(403).send({
+        message:
+          "Cannot find a user with this email. Please create a new account.",
+      })
+    }
+  } catch (error) {
+    throwError(res, error)
+  }
+})
+
 export default router

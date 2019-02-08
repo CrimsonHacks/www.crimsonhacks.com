@@ -1,10 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import axios from "axios"
+import isValidEmail from "../utilities/isValidEmail"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 // UIs
 import { Button, TextField } from "ui"
 import BgContainer from "../components/BgContainer"
+import Error from "../components/Error"
 
 const Container = styled(BgContainer)`
   display: flex;
@@ -52,14 +54,10 @@ const StyledForm = styled.form`
   }
 `
 
-const Error = styled.div`
-  color: red;
-`
-
 function getEmailError(email) {
   if (!email) {
     return "Required"
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
+  } else if (!isValidEmail(email)) {
     return "Invalid email address"
   } else if (!email.includes(".edu")) {
     return "Please use your .edu email"
