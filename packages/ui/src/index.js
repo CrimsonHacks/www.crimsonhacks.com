@@ -5,6 +5,4 @@ import Select from "./Select"
 import TextArea from "./TextArea"
 import TextField from "./TextField"
 
-export * from "./Icon"
-
 export { Button, CheckBox, Divider, Select, TextArea, TextField }
