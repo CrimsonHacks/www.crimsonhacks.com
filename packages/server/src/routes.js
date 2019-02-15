@@ -10,4 +10,6 @@ router.use("/", authenticationRouter)
 router.use("/", uploadRouter)
 router.use("/application", applicationRouter)
 
+router.get("/ping", (req, res) => res.sendStatus(200))
+
 export default router
