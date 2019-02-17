@@ -1,4 +1,4 @@
-# Select Component
+### Select Component
 
 A styled select component.
 
