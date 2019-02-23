@@ -87,7 +87,7 @@ class SignUpPage extends React.Component {
       <Container>
         <div>
           <h1>CrimsonHacks 2019</h1>
-          <h2>Sign Up</h2>
+          <h2>Sign In</h2>
 
           <Formik
             initialValues={{ email: "", password: "" }}
@@ -135,7 +135,6 @@ class SignUpPage extends React.Component {
               <StyledForm as={Form}>
                 <div>
                   <label>Email</label>
-                  <p>*Make sure to use your .edu email :)</p>
                   <TextField
                     as={Field}
                     type="email"
@@ -161,12 +160,13 @@ class SignUpPage extends React.Component {
 
                 <ButtonContainer>
                   <Button type="submit" disabled={isSubmitting}>
-                    Sign Up
+                    Sign In
                   </Button>
                 </ButtonContainer>
                 <p>
-                  Already signed up? <Link to="/sign-in">Sign In</Link>
+                  Haven't signed up yet? <Link to="/">Sign up.</Link>
                 </p>
+                <Link to="/resend">Resend verification email.</Link>
               </StyledForm>
             )}
           </Formik>

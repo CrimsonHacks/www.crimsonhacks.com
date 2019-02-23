@@ -94,7 +94,7 @@ function ResendPage() {
             <br />
             <TextField
               type="email"
-              placeholder="kedron@crimson.ua.edu"
+              placeholder="user@example.com"
               {...emailInput}
             />
           </label>
