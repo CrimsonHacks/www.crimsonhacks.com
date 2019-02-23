@@ -4,7 +4,7 @@ import axios from "axios"
 import isValidEmail from "../utilities/isValidEmail"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 // UIs
-import { Button, TextField } from "ui"
+import { Button, CheckBox, TextField } from "ui"
 import BgContainer from "../components/BgContainer"
 import Error from "../components/Error"
 import { Link } from "gatsby"
@@ -90,7 +90,7 @@ class SignUpPage extends React.Component {
           <h2>Sign Up</h2>
 
           <Formik
-            initialValues={{ email: "", password: "" }}
+            initialValues={{ email: "", password: "", agreetos: [] }}
             validate={values => {
               const errors = {}
 
@@ -99,6 +99,9 @@ class SignUpPage extends React.Component {
 
               const passwordError = getPasswordError(values.password)
               if (passwordError) errors.password = passwordError
+
+              if (!values.agreetos)
+                errors.agreetos = "Please agree to the terms of service."
 
               return errors
             }}
@@ -154,6 +157,16 @@ class SignUpPage extends React.Component {
                     placeholder="Password"
                   />
                   <ErrorMessage name="password" component={Error} />
+                </div>
+
+                <div>
+                  <CheckBox
+                    as={Field}
+                    name="agreetos"
+                    value="agree"
+                    label="I agree to the MLH Terms of Service."
+                  />
+                  <ErrorMessage name="agreetos" component={Error} />
                 </div>
 
                 {error && <p style={{ color: "red" }}>{error}</p>}
