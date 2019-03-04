@@ -3,7 +3,10 @@ import bcrypt from "bcryptjs"
 import jwt from "jsonwebtoken"
 import { users } from "../../db"
 import throwError from "../../error"
-import { sendVerificationEmail } from "../email/verification"
+import {
+  sendVerificationEmail,
+  sendResetPasswordEmail,
+} from "../email/services"
 
 const router = express.Router()
 
@@ -106,6 +109,72 @@ router.post("/resend", async (req, res) => {
         message:
           "Cannot find a user with this email. Please create a new account.",
       })
+    }
+  } catch (error) {
+    throwError(res, error)
+  }
+})
+
+router.post("/forgot-password", async (req, res) => {
+  try {
+    let { email } = req.body
+    email = email.toLowerCase()
+
+    const foundUser = await users.findOne({ email })
+
+    if (foundUser) {
+      sendResetPasswordEmail(email)
+      await users.updateOne({ email }, { $set: { isResettingPassword: true } })
+      res.sendStatus(200)
+    } else {
+      res.status(403).send({
+        message: `Cannot find a user with email "${email}"`,
+      })
+    }
+  } catch (error) {
+    throwError(res, error)
+  }
+})
+
+router.post("/reset-password", async (req, res) => {
+  try {
+    let { token } = req.body
+
+    console.log(token)
+
+    const {
+      data: { email, isReset },
+    } = jwt.verify(token, process.env.EMAIL_SECRET)
+
+    const foundUser = await users.findOne({ email })
+    if (!isReset || !foundUser || !foundUser.isResettingPassword) {
+      res.status(403).send({ message: "Invalid token." })
+    } else {
+      res.status(200).send({ email })
+    }
+  } catch (error) {
+    throwError(res, error)
+  }
+})
+
+router.put("/reset-password", async (req, res) => {
+  try {
+    let { token, password } = req.body
+
+    const {
+      data: { email, isReset },
+    } = jwt.verify(token, process.env.EMAIL_SECRET)
+
+    const foundUser = await users.findOne({ email })
+    if (!isReset || !foundUser || !foundUser.isResettingPassword) {
+      res.status(403).send({ message: "Invalid token." })
+    } else {
+      const hashedPw = await bcrypt.hash(password, 10)
+      await users.updateOne(
+        { email },
+        { $set: { isResettingPassword: false, password: hashedPw } },
+      )
+      res.sendStatus(200)
     }
   } catch (error) {
     throwError(res, error)
