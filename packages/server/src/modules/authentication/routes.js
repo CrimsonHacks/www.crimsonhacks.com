@@ -3,7 +3,10 @@ import bcrypt from "bcryptjs"
 import jwt from "jsonwebtoken"
 import { users } from "../../db"
 import throwError from "../../error"
-import { sendVerificationEmail } from "../email/verification"
+import {
+  sendVerificationEmail,
+  sendResetPasswordEmail,
+} from "../email/services"
 
 const router = express.Router()
 

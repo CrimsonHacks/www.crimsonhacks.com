@@ -3,6 +3,7 @@ import styled from "styled-components"
 import axios from "axios"
 import isValidEmail from "../utilities/isValidEmail"
 import { Formik, Form, Field, ErrorMessage } from "formik"
+import { Link } from "gatsby"
 // UIs
 import { Button, TextField } from "ui"
 import BgContainer from "../components/BgContainer"
@@ -161,6 +162,8 @@ class SignUpPage extends React.Component {
                     Sign in
                   </Button>
                 </ButtonContainer>
+
+                <Link to="/forgot-password">Forgot your password?</Link>
               </StyledForm>
             )}
           </Formik>
