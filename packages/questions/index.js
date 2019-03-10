@@ -275,13 +275,13 @@ export default {
     {
       name: "github",
       label: "GitHub profile",
-      required: true,
+      required: false,
       type: "text",
     },
     {
       name: "linkedin",
       label: "LinkedIn profile",
-      required: true,
+      required: false,
       type: "text",
     },
     {
