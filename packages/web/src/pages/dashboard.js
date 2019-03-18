@@ -57,14 +57,14 @@ class DashboardPage extends React.Component {
     switch (this.state.status) {
       case "INCOMPLETE":
         return null
-      case "APPLIED":
+      case "ACCEPTED":
         return (
           <p>
             Yay!{" "}
             <span role="img" aria-label="party popper">
               🎉
             </span>{" "}
-            You're all set! We'll reach out to you with a final decision.
+            You're all set! We look forward to having you at our event.
           </p>
         )
       default:
