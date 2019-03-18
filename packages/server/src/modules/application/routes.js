@@ -1,5 +1,5 @@
 import express from "express"
-import { apps } from "../../db"
+import { apps, users } from "../../db"
 import throwError from "../../error"
 import requireAuth from "../../middlewares/auth"
 
@@ -9,12 +9,22 @@ const router = express.Router()
 router.get("/status", requireAuth, async (req, res) => {
   try {
     const email = res.locals.email
-    const app = await apps.findOne({ email })
+
+    const appP = apps.findOne({ email })
+    const userP = users.findOne({ email })
+    const [app, user] = await Promise.all([appP, userP])
+
+    let status
     if (app) {
-      res.status(200).send({ status: "ACCEPTED" })
+      if (user.isWithdrawn) {
+        status = "WITHDRAWN"
+      } else {
+        status = "ACCEPTED"
+      }
     } else {
-      res.status(200).send({ status: "INCOMPLETE" })
+      status = "INCOMPLETE"
     }
+    res.status(200).send({ status })
   } catch (error) {
     throwError(res, error)
   }
@@ -49,6 +59,20 @@ router.get("/", requireAuth, async (req, res) => {
     if (app) delete app._id
 
     res.status(200).send({ application: app })
+  } catch (error) {
+    throwError(res, error)
+  }
+})
+
+// POST /application/going/
+router.post("/going", requireAuth, async (req, res) => {
+  try {
+    const email = res.locals.email
+    await users.updateOne(
+      { email },
+      { $set: { isWithdrawn: !req.body.isGoing } },
+    )
+    res.sendStatus(200)
   } catch (error) {
     throwError(res, error)
   }

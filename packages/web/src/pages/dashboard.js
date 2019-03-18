@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import axios from "axios"
 // UIs
+import { Button } from "ui"
 import Private from "../components/Private"
 import Layout from "../components/Layout"
 
@@ -53,19 +54,51 @@ class DashboardPage extends React.Component {
     this.setState({ loading: false, status: res.data.status })
   }
 
+  async going(isGoing) {
+    await axios.post(
+      `${process.env.GATSBY_API_URL}/application/going`,
+      { isGoing: isGoing },
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      },
+    )
+
+    this.setState({ status: isGoing ? "ACCEPTED" : "WITHDRAWN" })
+  }
+
   renderNote() {
     switch (this.state.status) {
       case "INCOMPLETE":
         return null
       case "ACCEPTED":
         return (
-          <p>
-            Yay!{" "}
-            <span role="img" aria-label="party popper">
-              🎉
-            </span>{" "}
-            You're all set! We look forward to having you at our event.
-          </p>
+          <React.Fragment>
+            <p>
+              Yay!{" "}
+              <span role="img" aria-label="party popper">
+                🎉
+              </span>{" "}
+              You're all set! We look forward to having you at our event.
+            </p>
+
+            <br />
+            <Button onClick={() => this.going(false)}>
+              Sorry, I cannot make it!
+            </Button>
+          </React.Fragment>
+        )
+      case "WITHDRAWN":
+        return (
+          <React.Fragment>
+            <p>
+              We're sorry you can't make it. Do let us know if thing changes.
+            </p>
+
+            <br />
+            <Button onClick={() => this.going(true)}>I can go now</Button>
+          </React.Fragment>
         )
       default:
         return null
