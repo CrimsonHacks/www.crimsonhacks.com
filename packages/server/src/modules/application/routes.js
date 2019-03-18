@@ -11,7 +11,7 @@ router.get("/status", requireAuth, async (req, res) => {
     const email = res.locals.email
     const app = await apps.findOne({ email })
     if (app) {
-      res.status(200).send({ status: "APPLIED" })
+      res.status(200).send({ status: "ACCEPTED" })
     } else {
       res.status(200).send({ status: "INCOMPLETE" })
     }
