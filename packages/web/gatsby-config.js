@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "CrimsonHacks 2019",
+    title: "CrimsonHacks 2020",
     description: "",
     canonicalUrl: "https://www.crimsonhacks.com",
     image: "https://www.crimsonhacks.com/logo.png",

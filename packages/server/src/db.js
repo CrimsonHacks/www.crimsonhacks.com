@@ -17,7 +17,7 @@ mongo.connect(
 
     client = dbClient
 
-    const db = client.db("ch2019")
+    const db = client.db("ch2020")
     users = db.collection("users")
     apps = db.collection("apps")
   },

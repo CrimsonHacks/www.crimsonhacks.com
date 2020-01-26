@@ -86,7 +86,7 @@ class Application extends React.Component {
     return (
       <Layout>
         <Container>
-          <Title>CrimsonHacks 2019 Application</Title>
+          <Title>CrimsonHacks 2020 Application</Title>
 
           <Formik
             initialValues={initialValues}

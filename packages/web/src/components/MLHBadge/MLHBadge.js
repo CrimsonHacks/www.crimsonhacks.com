@@ -39,7 +39,7 @@ function MLHBadge({ location }) {
           return (
             <StyledMLHBadge
               id="mlh-trust-badge"
-              href="https://mlh.io/seasons/na-2019/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2019-season&utm_content=white"
+              href="https://mlh.io/seasons/na-2020/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2020-season&utm_content=white"
               target="_blank"
             >
               <SVG />

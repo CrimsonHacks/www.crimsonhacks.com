@@ -74,10 +74,11 @@ function useAxios(url, body) {
 function ResetPassword({ location }) {
   const token = location.search.replace("?token=", "")
   console.log(token)
-  const { error, loading, data } = useAxios(
-    `${process.env.GATSBY_API_URL}/reset-password`,
-    { token },
-  )
+  const {
+    error,
+    loading,
+    data,
+  } = useAxios(`${process.env.GATSBY_API_URL}/reset-password`, { token })
 
   const { value: password, bindToInput: passwordInput } = useInput("")
   const {
@@ -119,7 +120,7 @@ function ResetPassword({ location }) {
   return (
     <Container>
       <div>
-        <h1>CrimsonHacks 2019</h1>
+        <h1>CrimsonHacks 2020</h1>
         <StyledForm>
           <h2>Reset Password</h2>
 

@@ -13,7 +13,7 @@ export function sendVerificationEmail(email) {
 
       transporter.sendMail({
         to: email,
-        subject: "CrimsonHacks 2019 - Verify Email",
+        subject: "CrimsonHacks 2020 - Verify Email",
         html: `<p>Please click this link to confirm your email.</p><br /><a href="${url}">${url}</a>`,
       })
     },
@@ -29,7 +29,7 @@ export function sendResetPasswordEmail(email) {
 
       transporter.sendMail({
         to: email,
-        subject: "CrimsonHacks 2019 - Reset Password",
+        subject: "CrimsonHacks 2020 - Reset Password",
         html: `<p>Please click this link to reset your account's password.</p><br /><a href="${url}">${url}</a>`,
       })
     },

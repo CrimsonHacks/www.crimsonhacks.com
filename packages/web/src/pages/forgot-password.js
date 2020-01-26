@@ -87,7 +87,7 @@ function ForgotPassword() {
   return (
     <Container>
       <div>
-        <h1>CrimsonHacks 2019</h1>
+        <h1>CrimsonHacks 2020</h1>
         <StyledForm>
           <h2>Forgot Password</h2>
 

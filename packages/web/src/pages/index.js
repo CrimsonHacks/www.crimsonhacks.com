@@ -82,7 +82,7 @@ class SignUpPage extends React.Component {
     return (
       <Container>
         <div>
-          <h1>CrimsonHacks 2019</h1>
+          <h1>CrimsonHacks 2020</h1>
 
           <Formik
             initialValues={{ email: "", password: "" }}
